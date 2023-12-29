@@ -1,0 +1,17 @@
+{
+    "name": "Adblocker",
+    "version": "1.0.0",
+    "description": "Adblocker",
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons": {
+        "16": "icons/logo_16.png"
+    },
+    "manifest_version": 2
+}
