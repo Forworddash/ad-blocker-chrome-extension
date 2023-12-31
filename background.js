@@ -36,3 +36,4 @@ chrome.webRequest.onBeforeRequest.addListener(
     { urls: combinedFilter },
     ["blocking"]
 );
+
