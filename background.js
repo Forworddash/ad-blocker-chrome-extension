@@ -1,5 +1,5 @@
 // First filter for YouTube-related URLs
-const youtubeFilter = {
+const filterOne = {
     urls: [
         "*://*.youtube.com/*",
         "*://*.ytimg.com/*",
@@ -7,7 +7,7 @@ const youtubeFilter = {
 };
 
 // Second filter for additional URLs
-const additionalFilter = {
+const filterTwo = {
     urls: [
         "*://*.example.com/*",
         "*://*.anotherexample.com/*",
@@ -15,7 +15,7 @@ const additionalFilter = {
 };
 
 // Combine both filters into a single array
-const combinedFilter = [...youtubeFilter.urls, ...additionalFilter.urls];
+const combinedFilter = [...filterOne.urls, ...filterTwo.urls];
 
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {

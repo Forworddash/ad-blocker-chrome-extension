@@ -15,5 +15,5 @@
         "32": "icons/logo_32.png",
         "64": "icons/logo_64.png"
     },
-    "manifest_version": 2
+    "manifest_version": 3
 }
