@@ -1,4 +1,4 @@
-// First filter for YouTube-related AD URL's
+// First filter for common ad URLs
 const filterOne = {
     urls: [
         // "*://*.youtube.com/*",
@@ -26,7 +26,7 @@ const filterTwo = {
     ]
 };
 
-// Combine both filters into a single array
+// Combine both filters into a single array, if more filter arrays are created, add them to the combinedFilter array
 const combinedFilter = [...filterOne.urls, ...filterTwo.urls];
 
 chrome.webRequest.onBeforeRequest.addListener(
