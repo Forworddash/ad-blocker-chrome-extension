@@ -1,4 +1,4 @@
-// array of urls to block
+// array of URLs to block
 const Filters = [
     "*://*.doubleclick.net/*",
     "*://partner.googleadservices.com/*",
@@ -12,18 +12,18 @@ const Filters = [
     "*://*.zedo.com/*",
     "*://*.doubleclick.com/*",
     "*://*.googleadservices.com/*"
-]
+];
 
 const AdvertisingFilter = [
     "*://*youtube.com/*"
-]
+];
 
-const allFilters = [Filters, AdvertisingFilter]
-
+const AllFilters = [...Filters, ...AdvertisingFilter];
 
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
-        return {cancel: true}},
-        {urls: allFilters},
-        ["blocking"]
-    )
+        return { cancel: true };
+    },
+    { urls: AllFilters },
+    ["blocking"]
+);
