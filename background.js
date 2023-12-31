@@ -1,8 +1,20 @@
-// First filter for YouTube-related URLs
+// First filter for YouTube-related AD URL's
 const filterOne = {
     urls: [
-        "*://*.youtube.com/*",
-        "*://*.ytimg.com/*",
+        // "*://*.youtube.com/*",
+        // "*://*.ytimg.com/*",
+        "*://*.doubleclick.net/*",
+        "*://partner.googleadservices.com/*",
+        "*://*.googlesyndication.com/*",
+        "*://*.google-analytics.com/*",
+        "*://creative.ak.fbcdn.net/*",
+        "*://*.adbrite.com/*",
+        "*://*.exponential.com/*",
+        "*://*.quantserve.com/*",
+        "*://*.scorecardresearch.com/*",
+        "*://*.zedo.com/*",
+        "*://*.doubleclick.com/*",
+        "*://*.googleadservices.com/*",
     ]
 };
 
