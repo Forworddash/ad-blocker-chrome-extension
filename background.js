@@ -11,19 +11,16 @@ const Filters = [
     "*://*.scorecardresearch.com/*",
     "*://*.zedo.com/*",
     "*://*.doubleclick.com/*",
-    "*://*.googleadservices.com/*"
+    "*://*.googleadservices.com/*",
+    "*://*youtube.com/*",
+    "*://*.ytimg.com/*",
 ];
 
-const AdvertisingFilter = [
-    "*://*youtube.com/*"
-];
-
-const AllFilters = [...Filters, ...AdvertisingFilter];
 
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
         return { cancel: true };
     },
-    { urls: AllFilters },
+    { urls: Filters },
     ["blocking"]
 );
