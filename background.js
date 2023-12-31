@@ -11,11 +11,19 @@ const Filters = [
     "*://*.scorecardresearch.com/*",
     "*://*.zedo.com/*",
     "*://*.doubleclick.com/*",
+    "*://*.googleadservices.com/*"
 ]
+
+const AdvertisingFilter = [
+    "*://*youtube.com/*"
+]
+
+const allFilters = [Filters, AdvertisingFilter]
+
 
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
         return {cancel: true}},
-        {urls: Filters},
+        {urls: allFilters},
         ["blocking"]
     )
