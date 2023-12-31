@@ -1,32 +1,4 @@
-// array of URLs to block
-// const Filters = [
-//     "*://*.doubleclick.net/*",
-//     "*://partner.googleadservices.com/*",
-//     "*://*.googlesyndication.com/*",
-//     "*://*.google-analytics.com/*",
-//     "*://creative.ak.fbcdn.net/*",
-//     "*://*.adbrite.com/*",
-//     "*://*.exponential.com/*",
-//     "*://*.quantserve.com/*",
-//     "*://*.scorecardresearch.com/*",
-//     "*://*.zedo.com/*",
-//     "*://*.doubleclick.com/*",
-//     "*://*.googleadservices.com/*",
-//     "*://*youtube.com/*",
-//     "*://*.ytimg.com/*",
-// ];
-
-
-// chrome.webRequest.onBeforeRequest.addListener(
-//     function(details) {
-//         return { cancel: true };
-//     },
-//     { urls: Filters },
-//     ["blocking"]
-// );
-
-
-// create a filter to block youtube completely
+// First filter for YouTube-related URLs
 const youtubeFilter = {
     urls: [
         "*://*.youtube.com/*",
@@ -34,10 +6,21 @@ const youtubeFilter = {
     ]
 };
 
+// Second filter for additional URLs
+const additionalFilter = {
+    urls: [
+        "*://*.example.com/*",
+        "*://*.anotherexample.com/*",
+    ]
+};
+
+// Combine both filters into a single array
+const combinedFilter = [...youtubeFilter.urls, ...additionalFilter.urls];
+
 chrome.webRequest.onBeforeRequest.addListener(
     function(details) {
         return { cancel: true };
     },
-    youtubeFilter,
+    { urls: combinedFilter },
     ["blocking"]
 );
