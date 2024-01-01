@@ -3,60 +3,80 @@
         "id": 1,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*doubleclick.net/*" }
+        "condition": { "urlFilter": "*://*.doubleclick.net/*" }
     },
     {
         "id": 2,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*googleadservices.com/*" }
+        "condition": { "urlFilter": "*://partner.googleadservices.com/*" }
     },
     {
         "id": 3,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*doubleclick.net/*" }
+        "condition": { "urlFilter": "*://*.googlesyndication.com/*" }
     },
     {
         "id": 4,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*googleadservices.com/*" }
+        "condition": { "urlFilter": "*://*.google-analytics.com/*" }
     },
     {
         "id": 5,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*doubleclick.net/*" }
+        "condition": { "urlFilter": "*://creative.ak.fbcdn.net/*" }
     },
     {
         "id": 6,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*googleadservices.com/*" }
+        "condition": { "urlFilter": "*://*.adbrite.com/*" }
     },
     {
         "id": 7,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*doubleclick.net/*" }
+        "condition": { "urlFilter": "*://*.exponential.com/*" }
     },
     {
         "id": 8,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*googleadservices.com/*" }
+        "condition": { "urlFilter": "*://*.quantserve.com/*" }
     },
     {
         "id": 9,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*doubleclick.net/*" }
+        "condition": { "urlFilter": "*://*.scorecardresearch.com/*" }
     },
     {
         "id": 10,
         "priority": 1,
         "action": { "type": "block" },
-        "condition": { "urlFilter": "*://*googleadservices.com/*" }
+        "condition": { "urlFilter": "*://*.zedo.com/*" }
+    },
+    {
+        "id": 11,
+        "priority": 1,
+        "action": { "type": "block" },
+        "condition": { "urlFilter": "*://*.doubleclick.com/*" }
+    },
+    {
+        "id": 12,
+        "priority": 1,
+        "action": { "type": "block" },
+        "condition": { "urlFilter": "*://*.googleadservices.com/*" }
+    },
+    {
+        "id": 13,
+        "priority": 1,
+        "action": { "type": "block" },
+        "condition": { "urlFilter": "*://*.youtube.com/get_midroll_info*" }
     }
+    
+
 ]
